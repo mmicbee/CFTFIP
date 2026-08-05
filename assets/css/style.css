@@ -109,6 +109,12 @@ header.hero{
   opacity:.9;
 }
 
+.brand img {
+  width: 50px;       
+  height: auto;       
+  max-width: 100%;    
+}
+
 .hero-grid{
   display:grid;grid-template-columns:1fr;gap:44px;align-items:center;
 }
@@ -133,24 +139,110 @@ blockquote{
   max-width:680px;margin:34px 0 0 0;padding-left:24px;border-left:3px solid var(--gold);color:var(--ink);
 }
 
-/* PROGRAMS as plots */
-.plots{display:grid;grid-template-columns:1fr;gap:2px;background:var(--ink);border:1px solid var(--ink);margin-top:10px;}
-@media(min-width:760px){.plots{grid-template-columns:1fr 1fr;}}
-.plot{background:var(--paper);padding:38px 34px;position:relative;}
-.plot .plot-tag{font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--paper);display:inline-block;padding:4px 10px;margin-bottom:16px;}
-.plot h3{font-size:24px;margin-bottom:10px;}
-.plot p{color:var(--ink-soft);font-size:15.5px;}
-.plot ul{margin:16px 0 0 0;padding-left:18px;font-size:14.5px;color:var(--ink-soft);}
-.plot ul li{margin-bottom:6px;}
-.plot.p1 .plot-tag{background:var(--green);}
-.plot.p2 .plot-tag{background:var(--gold);}
-.plot.p3 .plot-tag{background:#4C7A63;}
-.plot.p4 .plot-tag{background:var(--clay);}
-.plot::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:5px;}
-.plot.p1::after{background:var(--green);}
-.plot.p2::after{background:var(--gold);}
-.plot.p3::after{background:#4C7A63;}
-.plot.p4::after{background:var(--clay);}
+/* PROGRAMS AS CARDS */
+.plots {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: transparent; /* Removed solid ink background */
+  border: none;
+  margin-top: 24px;
+}
+
+@media (min-width: 760px) {
+  .plots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+  }
+}
+
+.plot {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 16px rgba(46, 32, 19, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 0; /* Cleared padding to accommodate top image header */
+}
+
+.plot:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(46, 32, 19, 0.12);
+}
+
+/* Image Placeholder Style */
+.plot-img-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--paper-dim);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-soft);
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Card Body Content */
+.plot-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.plot .plot-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--paper);
+  display: inline-block;
+  align-self: flex-start;
+  padding: 4px 10px;
+  margin-bottom: 14px;
+  border-radius: 2px;
+}
+
+.plot h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.plot p {
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.plot ul {
+  margin: 16px 0 0 0;
+  padding-left: 18px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.plot ul li {
+  margin-bottom: 6px;
+}
+
+.plot.p1 .plot-tag { background: var(--green); }
+.plot.p2 .plot-tag { background: var(--gold); }
+.plot.p3 .plot-tag { background: #4C7A63; }
+.plot.p4 .plot-tag { background: var(--clay); }
+
+.plot::after { content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 4px; }
+.plot.p1::after { background: var(--green); }
+.plot.p2::after { background: var(--gold); }
+.plot.p3::after { background: #4C7A63; }
+.plot.p4::after { background: var(--clay); }
 
 /* M&E reporting cadence */
 .cadence{display:grid;grid-template-columns:1fr;gap:0;margin-top:30px;border-top:1px solid var(--line);}
