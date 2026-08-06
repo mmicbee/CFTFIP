@@ -19,7 +19,7 @@ Then visit the URL it prints (usually `http://localhost:3000`).
 2. Go to **Settings → Pages**.
 3. Under **Source**, select your default branch (e.g. `main`) and `/ (root)`.
 4. Save. The site will be live within a minute or two at:
-   `https://YOUR-USERNAME.github.io/REPO-NAME/`
+   `https://mmicbee.github.io/CFTFIP/`
 5. Update the live link at the top of the root `README.md`.
 
 ## Deploy elsewhere
