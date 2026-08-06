@@ -2,11 +2,11 @@
 
 ## What is CFTFIP?
 
-CFTFIP (Care For The Future Integrated Project) is a community development proposal targeting Rachuonyo South, Oyugis Town, in Homabay County, Kenya. It is designed as an **integrated** project — meaning its four focus areas are meant to reinforce each other rather than run as separate initiatives.
+CFTFIP (Care For The Future Integrated Project) is a community development proposal targeting Nyalenda A, Kisumu EAst, in Kisumu County, Kenya. It is designed as an **integrated** project — meaning its four focus areas are meant to reinforce each other rather than run as separate initiatives.
 
 ## Why this location
 
-Rachuonyo South was chosen deliberately:
+Nyalenda A was chosen deliberately:
 
 - It has a strong population of small-scale farmers who stand to benefit directly from agricultural support.
 - It is a rural, remote sub-county — the areas where child exploitation and abuse are most prevalent, and where food security depends almost entirely on local production rather than imported supply.
