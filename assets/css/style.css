@@ -36,6 +36,13 @@ a{color:inherit;}
   color:var(--ink-soft);
   display:flex;align-items:center;gap:10px;
 }
+
+/* logo brand */
+.brand img {
+  width: 150px;       
+  height: auto;       
+  max-width: 100%;    
+}
 .eyebrow::before{content:"";width:22px;height:1px;background:var(--ink-soft);display:inline-block;}
 
 /* NAV */
