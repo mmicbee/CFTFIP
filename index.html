@@ -61,11 +61,7 @@
       </div>
     </div>
     <div class="hero-photo g-item">
-      <img src="assets/images/landimg.jpeg">
-      <div class="g-placeholder">
-        <span class="mono">HOME</span>
-        <span>Add images/hero.jpg</span>
-      </div>
+      <img src="assets/images/landimg.jpeg" alt="Weeding the buds in Nyalenda A">
       <figcaption>Weeding the buds</figcaption>
     </div>
   </div>
@@ -96,64 +92,69 @@
 <section class="alt" id="programs">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">The Work</div>
+      <div class="eyebrow">The Program</div>
       <h2>Four plots, one field</h2>
       <p class="lede">CFTFIP works on four fronts at once, because food, income, environment, and child safety are one problem, not four.</p>
     </div>
-
-    <div class="plots">
-     <div class="plot p1">
-          <div class="plot-img-placeholder">Image Placeholder</div>
-            <div class="plot-body">
-              <span class="plot-tag">Plot I — Agriculture & Food Security</span>
-              <h3>Growing more, and growing smarter</h3>
-              <p>Raising food and nutrition security for children and expectant mothers by improving crop and livestock productivity, extending access to appropriate technology, and strengthening pest and disease control.</p>
-              <ul>
-                <li>Pest and disease control in the field</li>
-                <li>Adoption of appropriate agricultural methods</li>
-                <li>Dietary intake, food access, diversity, and nutrition education</li>
-              </ul>
-            </div>
+ 
+    <!-- Card 1 -->
+    <div class="plot-card">
+      <div class="plot-body">
+        <span class="plot-tag">Plot I — Agriculture & Food Security</span>
+        <h3>Growing more, and growing smarter</h3>
+        <p>Raising food and nutrition security for children and expectant mothers by improving crop and livestock productivity, extending access to appropriate technology, and strengthening pest and disease control.</p>
+        <ul class="plot-list">
+          <li>Pest and disease control in the field</li>
+          <li>Adoption of appropriate agricultural methods</li>
+          <li>Dietary intake, food access, diversity, and nutrition education</li>
+        </ul>
       </div>
+        <img src="assets/images/farmer.jpeg">
+    </div>
 
-     <div class="plot p2">
-            <div class="plot-img-placeholder">Image Placeholder</div>
-            <div class="plot-body">
-              <span class="plot-tag">Plot II — Economic Development</span>
-              <h3>Livelihoods beyond the farm</h3>
-              <p>Strengthening small and medium enterprises in trade, agribusiness, communication technology, and the creative sector — including sports and entertainment — through entrepreneurship workshops that help young people build self-employment with real staying power.</p>
-            </div>
-     </div>
+    <!-- Card 2 -->
+    <div class="plot-card">
+      <div class="plot-body">
+        <span class="plot-tag">Plot II — Economic Development</span>
+        <h3>Livelihoods beyond the farm</h3>
+        <p>Strengthening small and medium enterprises in trade, agribusiness, communication technology, and the creative sector — including sports and entertainment — through entrepreneurship workshops that help young people build self-employment with real staying power.</p>
+      </div>
+      <img src="assets/images/IMG-20260715-WA0013.jpg">
+    </div>
 
-     <div class="plot p3">
-       <div class="plot-img-placeholder">Image Placeholder</div>
-         <div class="plot-body">
-           <span class="plot-tag">Plot III — Environment & Climate</span>
-              <h3>Protecting the land everything depends on</h3>
-              <p>Embedding resource efficiency, recycling, forest protection, drought-resilient crops, and climate-smart farming into daily practice.</p>
-              <ul>
-                <li>Tree nursery production</li>
-                <li>Solar energy and biogas adoption</li>
-                <li>Drought-tolerant, improved local seed varieties</li>
-                <li>Double-digging and organic production methods</li>
-                <li>Soil erosion control & agro-biodiversity conservation</li>
-                <li>Rainwater harvesting and soil moisture management</li>
-              </ul>
-          </div>
-     </div>
+    <!-- Card 3 -->
+    <div class="plot-card">
+      <div class="plot-body">
+        <span class="plot-tag">Plot III — Environment & Climate</span>
+        <h3>Protecting the land everything depends on</h3>
+        <p>Embedding resource efficiency, recycling, forest protection, drought-resilient crops, and climate-smart farming into daily practice.</p>
+        <ul class="plot-list">
+          <li>Tree nursery production</li>
+          <li>Solar energy and biogas adoption</li>
+          <li>Drought-tolerant, improved local seed varieties</li>
+          <li>Double-digging and organic production methods</li>
+          <li>Soil erosion control & agro-biodiversity conservation</li>
+          <li>Rainwater harvesting and soil moisture management</li>
+        </ul>
+      </div>
+      <img src="assets/images/cultivation.jpeg">
+    </div>
 
-     <div class="plot p4">
-        <div class="plot-img-placeholder">Image Placeholder</div>
-            <div class="plot-body">
-              <span class="plot-tag">Plot IV — Lobbying & Advocacy</span>
-              <h3>Accountability, and protecting children</h3>
-              <p>Pushing accountability from local and national representatives, and confronting child labour, sexual exploitation, child marriage, and FGM — working with local government, law enforcement, and the community to remove children from exploitative situations and keep them safe. Research underpins the work throughout.</p>
-            </div>
-     </div>
-     <blockquote>
-          "Building sustainable ecosystems starts with community-driven accountability and local action."
-        </blockquote>
+    <!-- Card 4 -->
+    <div class="plot-card">
+      <div class="plot-body">
+        <span class="plot-tag">Plot IV — Lobbying & Advocacy</span>
+        <h3>Accountability, and protecting children</h3>
+        <p>Pushing accountability from local and national representatives, and confronting child labour, sexual exploitation, child marriage, and FGM — working with local government, law enforcement, and the community to remove children from exploitative situations and keep them safe. Research underpins the work throughout.</p>
+      </div>
+      <img src="assets/images/_.jpeg">
+    </div>
+
   </div>
+
+  <blockquote class="plot-quote">
+    "Building sustainable ecosystems starts with community-driven accountability and local action."
+  </blockquote>
 </section>
 
 <svg class="hills" viewBox="0 0 1100 56" preserveAspectRatio="none" aria-hidden="true">
@@ -249,52 +250,31 @@
     </div>
 
     <div class="gallery-grid">
-      <!--
-        Add a photo by dropping a file named gallery-1.jpg (etc.) into the
-        /images folder, then swap the placeholder div below for:
-        <img src="images/gallery-1.jpg" alt="Describe the photo here">
-      -->
+     
+      
       <figure class="g-item">
-        <div class="g-placeholder">
-          <span class="mono">01</span>
-          <span>Add images/gallery-1.jpg</span>
-        </div>
-        <figcaption>Caption goes here</figcaption>
+        <img src="assets/images/IMG-20260715-WA0013.jpg" alt="gallery-1">
+        <figcaption>Packing the Best Quality for the Market</figcaption>
       </figure>
       <figure class="g-item">
-        <div class="g-placeholder">
-          <span class="mono">02</span>
-          <span>Add images/gallery-2.jpg</span>
-        </div>
-        <figcaption>Caption goes here</figcaption>
+        <img src="assets/images/_ (1).jpeg" alt="gallery-1">
+        <figcaption> Tracking progress and optimizing performance directly from the field.</figcaption>
       </figure>
       <figure class="g-item">
-        <div class="g-placeholder">
-          <span class="mono">03</span>
-          <span>Add images/gallery-3.jpg</span>
-        </div>
-        <figcaption>Caption goes here</figcaption>
+               <img src="assets/images/img3.jpg" alt="gallery-2">
+        <figcaption>Fresh sagaa(mboga  kienyeji)</figcaption>
       </figure>
       <figure class="g-item">
-        <div class="g-placeholder">
-          <span class="mono">04</span>
-          <span>Add images/gallery-4.jpg</span>
-        </div>
-        <figcaption>Caption goes here</figcaption>
+               <img src="assets/images/img4.jpg" alt="gallery-3">
+        <figcaption> Sharing best practices directly in the field.</figcaption>
       </figure>
       <figure class="g-item">
-        <div class="g-placeholder">
-          <span class="mono">05</span>
-          <span>Add images/gallery-5.jpg</span>
-        </div>
-        <figcaption>Caption goes here</figcaption>
+                <img src="assets/images/spray.jpeg" alt="gallery-4">
+        <figcaption> Ensuring healthy growth through targeted crop care. </figcaption>
       </figure>
       <figure class="g-item">
-        <div class="g-placeholder">
-          <span class="mono">06</span>
-          <span>Add images/gallery-6.jpg</span>
-        </div>
-        <figcaption>Caption goes here</figcaption>
+                <img src="assets/images/_ (2).jpeg" alt="gallery-5">
+        <figcaption> Conserving water and accelerating growth with precision drip lines.</figcaption>
       </figure>
     </div>
   </div>
