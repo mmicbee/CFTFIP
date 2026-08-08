@@ -141,23 +141,166 @@ blockquote{
 }
 
 /* PROGRAMS as plots */
-.plots{display:grid;grid-template-columns:1fr;gap:2px;background:var(--ink);border:1px solid var(--ink);margin-top:10px;}
-@media(min-width:760px){.plots{grid-template-columns:1fr 1fr;}}
-.plot{background:var(--paper);padding:38px 34px;position:relative;}
-.plot .plot-tag{font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--paper);display:inline-block;padding:4px 10px;margin-bottom:16px;}
-.plot h3{font-size:24px;margin-bottom:10px;}
-.plot p{color:var(--ink-soft);font-size:15.5px;}
-.plot ul{margin:16px 0 0 0;padding-left:18px;font-size:14.5px;color:var(--ink-soft);}
-.plot ul li{margin-bottom:6px;}
-.plot.p1 .plot-tag{background:var(--green);}
-.plot.p2 .plot-tag{background:var(--gold);}
-.plot.p3 .plot-tag{background:#4C7A63;}
-.plot.p4 .plot-tag{background:var(--clay);}
-.plot::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:5px;}
-.plot.p1::after{background:var(--green);}
-.plot.p2::after{background:var(--gold);}
-.plot.p3::after{background:#4C7A63;}
-.plot.p4::after{background:var(--clay);}
+/* Main Section & Wrap Layout */
+#programs {
+  padding: 60px 0;
+  background-color: var(--paper-dim); /* Subtle background fill for .alt section */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Top Header Section Styling */
+.sec-head {
+  text-align: center;
+  margin-bottom: 48px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sec-head .eyebrow {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.sec-head h2 {
+  font-size: 2.25rem;
+  color: var(--ink);
+  margin: 0 0 16px 0;
+  letter-spacing: -0.02em;
+}
+
+.sec-head .lede {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* Flexbox Cards Vertical Stack */
+.plots-flex-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Individual Card (Text Left, Image Right) */
+.plot-card {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+  align-items: stretch; /* Image height matches text block automatically */
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Left Side Content Area */
+.plot-body {
+  flex: 1;
+  padding: 32px;
+}
+
+.plot-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.plot-body h3 {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+}
+
+.plot-body p {
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+}
+
+.plot-list {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--ink-soft);
+}
+
+.plot-list li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.plot-card img {
+  width: 35%;
+  min-width: 250px;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 768px) {
+  .plot-card img {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+/* Right Side Image Area */
+.plot-img-placeholder {
+  width: 35%; /* Distribution ratio for image width */
+  min-width: 250px;
+  background-color: var(--paper-dim);
+  color: var(--ink-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+/* Bottom Quote Layout */
+.plot-quote {
+  margin: 56px auto 0 auto;
+  text-align: center;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* Mobile & Tablet Breaks */
+@media (max-width: 768px) {
+  .sec-head h2 {
+    font-size: 1.75rem;
+  }
+
+  .plot-card {
+    flex-direction: column-reverse; /* Puts image layout stacked over text on small viewports */
+  }
+  
+  .plot-img-placeholder {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .plot-body {
+    padding: 24px;
+  }
+}
+
 
 /* M&E reporting cadence */
 .cadence{display:grid;grid-template-columns:1fr;gap:0;margin-top:30px;border-top:1px solid var(--line);}
